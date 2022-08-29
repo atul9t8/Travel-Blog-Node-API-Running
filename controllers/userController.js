@@ -4,6 +4,10 @@ const User = require("../models/registrationModel");
 const bcrypt = require("bcrypt");
 const user = require("../models/registrationModel");
 
+const home = async(req, res)=>{
+    res.send("Home Page")
+}
+
 const registration = async (req, res)=>{
     let name = req.body.name;
     let email = req.body.email;
@@ -57,4 +61,4 @@ const login = async (req,res)=>{
     }
 }
 
-module.exports = { registration, login }
+module.exports = { registration, login, home }
